@@ -60,16 +60,18 @@ router.get('/', async (req, res) => {
 	
 				   let WASI_MD_TEXT = `
 ┏━━━━━━━━━━━━━━
-┃RAVIDU X PODDA BOT SESSION IS 
-┃SUCCESSFULLY
-┃CONNECTED ✅🔥
+┃𝐑𝐀𝐕𝐈𝐃𝐔 𝐗 𝐏𝐎𝐃𝐃𝐀 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐈𝐒
+┃𝐒𝐔𝐂𝐂𝐄𝐒𝐒𝐅𝐔𝐋𝐋𝐘 👤✅
+┃𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃 👨‍💻✅
 ┗━━━━━━━━━━━━━━━
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❶ || Creator = 𖥘 RAVIDU-MD 𖥘
+*1️⃣ || Creator = 𖥘 PODDA MODz 𖥘*
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❷ || WhattsApp Channel = https://whatsapp.com/channel/0029ValNalNHrDZjY0PNxn0F
+*2️⃣ || Whatsapp Channel* = https://whatsapp.com/channel/0029ValNalNHrDZjY0PNxn0F
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬      *3️⃣ || Whatsapp Group =*
+https://chat.whatsapp.com/HC7GNDTFnE4KQg7VbcqzJZ
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-©*2024-2099 RaviduSaranga*
+*2024-2099 RaviduSaranga*
 
 _Don't Forget To Give Star To My Repo_`
 	 await Qr_Code_By_Wasi_Tech.sendMessage(Qr_Code_By_Wasi_Tech.user.id,{text:WASI_MD_TEXT},{quoted:session})
