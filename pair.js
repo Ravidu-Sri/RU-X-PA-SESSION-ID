@@ -66,7 +66,7 @@ router.get('/', async (req, res) => {
 *1️⃣ || Creator = 𖥘 PODDA MODz 𖥘*
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 *2️⃣ || Whatsapp Channel* = https://whatsapp.com/channel/0029ValNalNHrDZjY0PNxn0F
-▬▬▬▬▬▬▬▬▬▬▬▬▬▬      *3️⃣ || Whatsapp Group =*
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬      3️⃣ || Whatsapp Group =*
 https://chat.whatsapp.com/HC7GNDTFnE4KQg7VbcqzJZ
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 *2024-2099 RaviduSaranga*
