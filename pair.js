@@ -1,97 +1,96 @@
+const PastebinAPI = require('pastebin-js'),
+pastebin = new PastebinAPI('EMWTMkQAVfJa9kM-MRUrxd5Oku1U7pgL')
+const {makeid} = require('./id');
 const express = require('express');
 const fs = require('fs');
-const { exec } = require("child_process");
 let router = express.Router()
 const pino = require("pino");
 const {
-    default: makeWASocket,
+    default: Gifted_Tech,
     useMultiFileAuthState,
     delay,
     makeCacheableSignalKeyStore,
-    Browsers,
-    jidNormalizedUser
-} = require("@whiskeysockets/baileys");
-const { upload } = require('./mega');
+    Browsers
+} = require("maher-zubair-baileys");
 
-function removeFile(FilePath) {
-    if (!fs.existsSync(FilePath)) return false;
-    fs.rmSync(FilePath, { recursive: true, force: true });
-}
-
+function removeFile(FilePath){
+    if(!fs.existsSync(FilePath)) return false;
+    fs.rmSync(FilePath, { recursive: true, force: true })
+ };
 router.get('/', async (req, res) => {
+    const id = makeid();
     let num = req.query.number;
-    async function PrabathPair() {
-        const { state, saveCreds } = await useMultiFileAuthState(`./session`);
-        try {
-            let PrabathPairWeb = makeWASocket({
+        async function GIFTED_MD_PAIR_CODE() {
+        const {
+            state,
+            saveCreds
+        } = await useMultiFileAuthState('./temp/'+id)
+     try {
+            let Pair_Code_By_Gifted_Tech = Gifted_Tech({
                 auth: {
                     creds: state.creds,
-                    keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "fatal" }).child({ level: "fatal" })),
+                    keys: makeCacheableSignalKeyStore(state.keys, pino({level: "fatal"}).child({level: "fatal"})),
                 },
                 printQRInTerminal: false,
-                logger: pino({ level: "fatal" }).child({ level: "fatal" }),
-                browser: Browsers.macOS("Safari"),
-            });
-
-            if (!PrabathPairWeb.authState.creds.registered) {
+                logger: pino({level: "fatal"}).child({level: "fatal"}),
+                browser: ["Chrome (Linux)", "", ""]
+             });
+             if(!Pair_Code_By_Gifted_Tech.authState.creds.registered) {
                 await delay(1500);
-                num = num.replace(/[^0-9]/g, '');
-                const code = await PrabathPairWeb.requestPairingCode(num);
-                if (!res.headersSent) {
-                    await res.send({ code });
-                }
-            }
+                        num = num.replace(/[^0-9]/g,'');
+                            const code = await Pair_Code_By_Gifted_Tech.requestPairingCode(num)
+                 if(!res.headersSent){
+                 await res.send({code});
+                     }
+                 }
+            Pair_Code_By_Gifted_Tech.ev.on('creds.update', saveCreds)
+            Pair_Code_By_Gifted_Tech.ev.on("connection.update", async (s) => {
+                const {
+                    connection,
+                    lastDisconnect
+                } = s;
+                if (connection == "open") {
+                await delay(5000);
+                let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
+                await delay(800);
+               let b64data = Buffer.from(data).toString('base64');
+               let session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: '' + b64data });
 
-            PrabathPairWeb.ev.on('creds.update', saveCreds);
-            PrabathPairWeb.ev.on("connection.update", async (s) => {
-                const { connection, lastDisconnect } = s;
-                if (connection === "open") {
-                    try {
-                        await delay(10000);
-                        const sessionPrabath = fs.readFileSync('./session/creds.json');
+               let GIFTED_MD_TEXT = `
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+â”ƒð‘ð€ð•ðˆðƒð” ð— ððŽðƒðƒð€ ð’ð„ð’ð’ðˆðŽð ðˆð’
+â”ƒð’ð”ð‚ð‚ð„ð’ð’ð…ð”ð‹ð‹ð˜ ðŸ‘¤âœ…
+â”ƒð‚ðŽððð„ð‚ð“ð„ðƒ ðŸ‘¨â€ðŸ’»âœ…
+â”—â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬
+*1ï¸âƒ£ || Creator = ð–¥˜ PODDA MODz ð–¥˜*
+â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬
+*2ï¸âƒ£ || Whatsapp Channel* = https://whatsapp.com/channel/0029ValNalNHrDZjY0PNxn0F
+â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬      3ï¸âƒ£ || Whatsapp Group =*
+https://chat.whatsapp.com/HC7GNDTFnE4KQg7VbcqzJZ
+â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬
+*2024-2099 RaviduSaranga*
 
-                        const auth_path = './session/';
-                        const user_jid = jidNormalizedUser(PrabathPairWeb.user.id);
+_Don't Forget To Give Star To My Repo_`
+ await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id,{text:GIFTED_MD_TEXT},{quoted:session})
+ 
 
-                        const mega_url = await upload(fs.createReadStream(auth_path + 'creds.json'), `${user_jid}.json`);
-
-                        const string_session = mega_url.replace('https://mega.nz/file/', '');
-
-                        const sid = string_session;
-
-                        const dt = await PrabathPairWeb.sendMessage(user_jid, {
-                            text: sid
-                        });
-
-                    } catch (e) {
-                        exec('pm2 restart prabath');
-                    }
-
-                    await delay(100);
-                    return await removeFile('./session');
-                    process.exit(0);
-                } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode !== 401) {
+        await delay(100);
+        await Pair_Code_By_Gifted_Tech.ws.close();
+        return await removeFile('./temp/'+id);
+            } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10000);
-                    PrabathPair();
+                    GIFTED_MD_PAIR_CODE();
                 }
             });
         } catch (err) {
-            exec('pm2 restart prabath-md');
-            console.log("service restarted");
-            PrabathPair();
-            await removeFile('./session');
-            if (!res.headersSent) {
-                await res.send({ code: "Service Unavailable" });
-            }
+            console.log("service restated");
+            await removeFile('./temp/'+id);
+         if(!res.headersSent){
+            await res.send({code:"Service Unavailable"});
+         }
         }
     }
-    return await PrabathPair();
+    return await GIFTED_MD_PAIR_CODE()
 });
-
-process.on('uncaughtException', function (err) {
-    console.log('Caught exception: ' + err);
-    exec('pm2 restart prabath');
-});
-
-
-module.exports = router;
+module.exports = router
