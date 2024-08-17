@@ -57,18 +57,18 @@ router.get('/', async (req, res) => {
                let session = await Pair_Code_By_Gifted_Tech.sendMessage(Pair_Code_By_Gifted_Tech.user.id, { text: '' + b64data });
 
                let GIFTED_MD_TEXT = `
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
-â”ƒð‘ð€ð•ðˆðƒð” ð— ððŽðƒðƒð€ ð’ð„ð’ð’ðˆðŽð ðˆð’
-â”ƒð’ð”ð‚ð‚ð„ð’ð’ð…ð”ð‹ð‹ð˜ ðŸ‘¤âœ…
-â”ƒð‚ðŽððð„ð‚ð“ð„ðƒ ðŸ‘¨â€ðŸ’»âœ…
-â”—â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
-â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬
-*1ï¸âƒ£ || Creator = ð–¥˜ PODDA MODz ð–¥˜*
-â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬
-*2ï¸âƒ£ || Whatsapp Channel* = https://whatsapp.com/channel/0029ValNalNHrDZjY0PNxn0F
-â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬      3ï¸âƒ£ || Whatsapp Group =*
+┏━━━━━━━━━━━━━━
+┃𝐑𝐀𝐕𝐈𝐃𝐔 𝐗 𝐏𝐎𝐃𝐃𝐀 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐈𝐒
+┃𝐒𝐔𝐂𝐂𝐄𝐒𝐒𝐅𝐔𝐋𝐋𝐘 👤✅
+┃𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃 👨‍💻✅
+┗━━━━━━━━━━━━━━━
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+*1️⃣ || Creator = 𖥘 PODDA MODz 𖥘*
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+*2️⃣ || Whatsapp Channel* = https://whatsapp.com/channel/0029ValNalNHrDZjY0PNxn0F
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬      *3️⃣ || Whatsapp Group =*
 https://chat.whatsapp.com/HC7GNDTFnE4KQg7VbcqzJZ
-â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬â–¬
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 *2024-2099 RaviduSaranga*
 
 _Don't Forget To Give Star To My Repo_`
